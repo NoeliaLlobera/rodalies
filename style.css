@@ -2,6 +2,7 @@
   background-color: rgba(0, 161, 201, 0.171);
   padding: 20px;
   border-radius: 20px;
+  position: relative;
 }
 #containerInt1 h3, #containerInt1 p, #containerInt1 option, #containerInt1 label {
   font-family: sans-serif;
@@ -36,4 +37,17 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+#containerInt1 img {
+  width: 30%;
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+  opacity: 0.2;
+}
+@media screen and (max-width: 768px) {
+  #containerInt1 img {
+    top: 5%;
+    right: 5%;
+  }
 }/*# sourceMappingURL=style.css.map */
