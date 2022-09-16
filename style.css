@@ -1,5 +1,5 @@
 #containerInt1 {
-  background-color: rgba(0, 161, 201, 0.171);
+  background-color: rgba(0, 86, 184, 0.171);
   padding: 20px;
   border-radius: 20px;
   position: relative;
@@ -8,12 +8,16 @@
   font-family: sans-serif;
   font-size: 20;
 }
+#containerInt1 p {
+  line-height: 1.5;
+}
 #containerInt1 h3 {
   text-align: center;
+  font-size: 24px;
 }
 #containerInt1 .data {
   font-weight: bold;
-  color: rgb(0, 161, 201);
+  color: rgb(0, 86, 184);
 }
 #containerInt1 .afectacio {
   margin-left: 20px;
@@ -24,10 +28,10 @@
   margin-top: 2px;
 }
 #containerInt1 label {
-  font-size: 20px;
+  font-size: 23px;
 }
 #containerInt1 select {
-  font-size: 20px;
+  font-size: 23px;
   border: unset;
   border-bottom: 1px solid black;
 }
