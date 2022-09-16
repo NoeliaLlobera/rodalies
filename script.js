@@ -19,7 +19,7 @@ let afectacions = [];
 //R2N I R11
 //17 i 19 setembre
 afectacions[0] = new Afectació("R2N","Dissabte 17 de setembre i diumenge 18 de setembre", "Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Montcada i Reixach", 
-"<br>  - Caminar fins a l'estació Montcada i Reixac - Manresa (enllaç amb línies R4, R12 i R7 <br> - Bus complementari cada 15 minuts desde Montcada fins a Sagrera Meridiana.")
+"<br>  - Caminar fins a l'estació Montcada i Reixac - Manresa (enllaç amb línies R4, R12 i R7) <br> - Bus complementari cada 15 minuts desde Montcada fins a Sagrera Meridiana.")
 afectacions[1] = new Afectació("R11","Dissabte 17-09 i diumenge 18-09", "Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Montcada i Reixach", "<br>  - Caminar fins a l'estació Montcada i Reixac - Manresa (enllaç amb línies R4, R12 i R7 <br> - Bus complementari cada 15 minuts desde Montcada fins a Sagrera Meridiana.");
 
 //19 DE SETEMBRE AL 2 DE DESEMBRE
