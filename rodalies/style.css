@@ -1,0 +1,39 @@
+#containerInt1 {
+  background-color: rgba(0, 161, 201, 0.171);
+  padding: 20px;
+  border-radius: 20px;
+}
+#containerInt1 h3, #containerInt1 p, #containerInt1 option, #containerInt1 label {
+  font-family: sans-serif;
+  font-size: 20;
+}
+#containerInt1 h3 {
+  text-align: center;
+}
+#containerInt1 .data {
+  font-weight: bold;
+  color: rgb(0, 161, 201);
+}
+#containerInt1 .afectacio {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+#containerInt1 .alternativa {
+  margin-left: 20px;
+  margin-top: 2px;
+}
+#containerInt1 label {
+  font-size: 20px;
+}
+#containerInt1 select {
+  font-size: 20px;
+  border: unset;
+  border-bottom: 1px solid black;
+}
+#containerInt1 .centrar {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */
