@@ -2,7 +2,263 @@
 let sel2 = document.querySelector("#s2");
 let sel3 = document.querySelector("#s3");
 
+let comprovarQAf = () => {
+    let valorSelect = document.querySelector("#select").value;
+    if (valorSelect == "R1"){
+        comprovarAf();
+    } else if( valorSelect == "R2N"){
+        comprovarAfR2();
+    } else if (valorSelect == "R11"){
+        comprovarAfR11();
+    }
+}
+
+//R2
+let estacionsR2 = ()=> {
+    //BORRAR estaciona altres linies
+    let estacions = document.querySelectorAll(".optBorrar");
+    estacions.forEach(elem => elem.remove());
+    //mostrar selects
+    let content2 = document.querySelector("#content2");
+    content2.style.display = "block";
+    //estacions
+    let estacionsZ1 = ["Aeroport", "El Prat de Llobregat", "Bellvitge", "BCN-Sants", "BCN-Passeig de Gràcia", "BCN-Estació de França"];
+    let estacionsZ2 = ["BCN-El Clot"];
+    let estacionsZ3 = ["BCN-Sant Andreu Comtal", "Montcada i Reixac", "La Llagosta", "Mollet", "Montmeló", "Granollers Centre", "Les Franqueses-Granollers Nord", "Cardedeu", "Llinars del Vallès", "Palautordera", "Sant Celoni", "Gualba", "Riells i Viabrea-Breda", "Hostalric", "Maçanet-Massanes"];
+    //variables selecció HTML
+    sel2 = document.querySelector("#s2");
+    sel3 = document.querySelector("#s3");
+    //optionsZ1
+    for(let i=0; i<estacionsZ1.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 1;
+        opt.innerHTML = estacionsZ1[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ1.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 1;
+        opt.innerHTML = estacionsZ1[i];
+        sel3.appendChild(opt);
+    }
+    //optionsZ2
+    for(let i=0; i<estacionsZ2.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 2;
+        opt.innerHTML = estacionsZ2[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ2.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 2;
+        opt.innerHTML = estacionsZ2[i];
+        sel3.appendChild(opt);
+    }
+    //optionsZ3
+    for(let i=0; i<estacionsZ3.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 3;
+        opt.innerHTML = estacionsZ3[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ3.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 3;
+        opt.innerHTML = estacionsZ3[i];
+        sel3.appendChild(opt);
+    }
+}
+let comprovarAfR2 = () =>{
+    //borrar si hi ha alternatives
+    let del = document.querySelectorAll(".b_alt");
+    del.forEach(elem => elem.remove())
+
+    // Z1 --> Z1
+    if(sel2.value == 1 && sel3.value==1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        content2.appendChild(res);
+    }
+    // Z3 --> Z3
+    if(sel2.value == 3 && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        content2.appendChild(res);
+    }
+    //1-2
+    if(sel2.value == 1 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Combinació complicada. Renfe proposa que vagis fins a l'estació de Sants i facis trasbord a la línia blava del metro o a les línies R3, R4, R12 per anar fins a la Sagrera. Un cop allà suggereix agafar la línia vermella del metro fins al Clot";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 1 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Combinació complicada. Renfe proposa que agafis el metro (L1) fins a la Sagrera i allà facis trasbord o bé a la línia blava del metro o a les les línies R3, R4, R12 per arribar fins a Sants. A Sants pots tornar a agafar l'R2 Nord.";
+        content2.appendChild(res);
+    }
+    //1-3
+    if(sel2.value == 1 && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o bé la línia blava del metro o a les les línies R3, R4, R12 fins a La Sagrera. Allà proposa o agafar la línia vermella del metro fins a Sant Andreu o agafar un bus llançadora fins a Sant Andreu (funciona els feiners de 6:00 a 10:00 i de 16:00 a 20:00) o fins a Granollers (feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers). A Granollers es pot tornar a agafar l'R2 Nord.";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 3 && sel3.value == 1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe proposa: <br>  - Anar fins a Granollers i allà agafar un bus llançadora cap a la Sagrera, per enllaçar amb la línia blava del metro o rodalies (R3, R4, R12), que arriben fins a Sants (allà es pot tornar a agafar l'R2N) <br>  - Agafar un bus llançadora a Granollers fins a la Sagrera i fer el mateix trajecte que en l'opció anterior. Horari del bus: feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers"
+        content2.appendChild(res);
+    }
+    //2-3
+    if(sel2.value == 2 && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "L'alternativa és agafar la línia vermella del metro fins a Sant Andreu, on es pot agafar l'R2N";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 3 && sel3.value == 2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe proposa agafar a Sant Andreu la línia vermella del metro que arriba fins al Clot";
+        content2.appendChild(res);
+    }
+}
+//R11
+let estacionsR11 = ()=> {
+    //BORRAR estaciona altres linies
+    let estacions = document.querySelectorAll(".optBorrar");
+    estacions.forEach(elem => elem.remove());
+    //mostrar selects
+    let content2 = document.querySelector("#content2");
+    content2.style.display = "block";
+    //estacions
+    let estacionsZ1 = ["BCN-Sants", "BCN-Passeig de Gràcia"];
+    let estacionsZ2 = ["BCN-Clot/Aragó"];
+    let estacionsZ3 = ["BCN-Sant Andreu Comtal", "Granollers Centre", "Sant Celoni", "Gualba", "Riells i Viabrea-Breda", "Hostalric", "Maçanet-Massanes", "Sils", "Caldes de Malavella", "Riudellots", "Fornells de la Selva", "Girona", "Celrà", "Bordils-Juià", "Flaçà", "Sant Jordi Desvalls", "Cremallera", "Sant Miquel de Fluvià", "Vilamalla", "Figueres","Vilajuïga", "Llançà", "Colera", "Portbou", "Cerbère"];
+    
+    //variables selecció HTML
+    sel2 = document.querySelector("#s2");
+    sel3 = document.querySelector("#s3");
+    //optionsZ1
+    for(let i=0; i<estacionsZ1.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 1;
+        opt.innerHTML = estacionsZ1[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ1.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 1;
+        opt.innerHTML = estacionsZ1[i];
+        sel3.appendChild(opt);
+    }
+    //optionsZ2
+    for(let i=0; i<estacionsZ2.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 2;
+        opt.innerHTML = estacionsZ2[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ2.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 2;
+        opt.innerHTML = estacionsZ2[i];
+        sel3.appendChild(opt);
+    }
+    //optionsZ3
+    for(let i=0; i<estacionsZ3.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 3;
+        opt.innerHTML = estacionsZ3[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ3.length; i++){
+        let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
+        opt.value = 3;
+        opt.innerHTML = estacionsZ3[i];
+        sel3.appendChild(opt);
+    }
+}
+let comprovarAfR11 = () =>{
+    //borrar si hi ha alternatives
+    let del = document.querySelectorAll(".b_alt");
+    del.forEach(elem => elem.remove())
+
+    // Z1 --> Z1
+    if(sel2.value == 1 && sel3.value==1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        content2.appendChild(res);
+    }
+    // Z3 --> Z3
+    if(sel2.value == 3 && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        content2.appendChild(res);
+    }
+    //1-2
+    if(sel2.value == 1 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Combinació complicada. Renfe proposa que vagis fins a l'estació de Sants i facis trasbord a la línia blava del metro o a les línies R3, R4, R12 per anar fins a la Sagrera. Un cop allà suggereix agafar la línia vermella del metro fins al Clot";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 1 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Combinació complicada. Renfe proposa que agafis el metro (L1) fins a la Sagrera i allà facis trasbord o bé a la línia blava del metro o a les les línies R3, R4, R12 per arribar fins a Sants. A Sants pots tornar a agafar l'R2 Nord.";
+        content2.appendChild(res);
+    }
+    //1-3
+    if(sel2.value == 1 && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o bé la línia blava del metro o a les les línies R3, R4, R12 fins a La Sagrera. Allà proposa o agafar la línia vermella del metro fins a Sant Andreu o agafar un bus llançadora fins a Sant Andreu (funciona els feiners de 6:00 a 10:00 i de 16:00 a 20:00) o fins a Granollers (feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers). A Granollers es pot tornar a agafar l'R2 Nord.";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 3 && sel3.value == 1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe proposa: <br>  - Anar fins a Granollers i allà agafar un bus llançadora cap a la Sagrera, per enllaçar amb la línia blava del metro o rodalies (R3, R4, R12), que arriben fins a Sants (allà es pot tornar a agafar l'R2N) <br>  - Agafar un bus llançadora a Granollers fins a la Sagrera i fer el mateix trajecte que en l'opció anterior. Horari del bus: feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers"
+        content2.appendChild(res);
+    }
+    //2-3
+    if(sel2.value == 2 && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "L'alternativa és agafar la línia vermella del metro fins a Sant Andreu, on es pot agafar l'R2N";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 3 && sel3.value == 2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe proposa agafar a Sant Andreu la línia vermella del metro que arriba fins al Clot";
+        content2.appendChild(res);
+    }
+}
+//R1
 let estacionsR1 = () => {
+    //BORRAR ESTACIOSN ANTERIOR
+    let estacions = document.querySelectorAll(".optBorrar");
+    estacions.forEach(elem => elem.remove());
     //mostrar selects
     let content2 = document.querySelector("#content2");
     content2.style.display = "block";
@@ -17,12 +273,14 @@ let estacionsR1 = () => {
     //optionsZ1
     for(let i=0; i<estacionsZ1.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 1;
         opt.innerHTML = estacionsZ1[i];
         sel2.appendChild(opt);
     }
     for(let i=0; i<estacionsZ1.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 1;
         opt.innerHTML = estacionsZ1[i];
         sel3.appendChild(opt);
@@ -30,12 +288,14 @@ let estacionsR1 = () => {
     //optionsZ2
     for(let i=0; i<estacionsZ2.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 2;
         opt.innerHTML = estacionsZ2[i];
         sel2.appendChild(opt);
     }
     for(let i=0; i<estacionsZ2.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 2;
         opt.innerHTML = estacionsZ2[i];
         sel3.appendChild(opt);
@@ -43,25 +303,29 @@ let estacionsR1 = () => {
     //optionsZ3
     for(let i=0; i<estacionsZ3.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 3;
         opt.innerHTML = estacionsZ3[i];
         sel2.appendChild(opt);
     }
     for(let i=0; i<estacionsZ3.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 3;
         opt.innerHTML = estacionsZ3[i];
         sel3.appendChild(opt);
     }
-    //optionsZ3
+    //optionsZ4
     for(let i=0; i<estacionsZ4.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 4;
         opt.innerHTML = estacionsZ4[i];
         sel2.appendChild(opt);
     }
     for(let i=0; i<estacionsZ4.length; i++){
         let opt = document.createElement("option");
+        opt.classList.add("optBorrar");
         opt.value = 4;
         opt.innerHTML = estacionsZ4[i];
         sel3.appendChild(opt);
@@ -174,14 +438,7 @@ let comprovarAf  = () =>{
     }
 }
 
-
-
-
-
-
 //CLASSE AFECTACIÓ
-// `Línia: ${linia}`,`Dates: ${data}`,`Afectació: ${afectacio}`,`Alternatives de Renfe: ${alternativa}`
-
 class Afectació {
     constructor(linia, data, afectacio, alternativa){
         //per a seleccionar
@@ -192,7 +449,6 @@ class Afectació {
         this.alternativa = alternativa;
     }
 }
-
 let afectacions = [];
 
 //AFEGIR AFECTACIONS AQUÍ
@@ -236,26 +492,7 @@ afectacions[8] = new Afectació(
 "<br>  - Caminar fins a la parada Badalona Pompeu Fabra de la L2 del Metro (10 minuts) <br>  - Caminar fins a la parada del Bus B7 Bonavista/Bufalà (25 minuts) per enllaçar amb el TRAM a Sant Adrià"
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //VARIABLES NECESARIES PER MOSTRAR
-    // valor del select
-
     // per al resultat
 let pData;
 let pAfectacio;
@@ -266,8 +503,10 @@ let mostrar = () =>{
     let valorSelect = document.querySelector("#select").value;
     if (valorSelect == "R1"){
         estacionsR1();
-    } else{
-        content2.style.display="none";
+    } else if(valorSelect=="R2N"){
+        estacionsR2();
+    } else if(valorSelect=="R11"){
+         estacionsR11();
     }
     
     if(i){
@@ -282,8 +521,6 @@ let mostrar = () =>{
     
     for(let i=0; i<afectacions.length; i++){
         if (afectacions[i].linia==valorSelect){
-            //SI HI HA NODES
-            
             //CREAR NODES
             let elemData = document.createElement("p");
             let content = document.querySelector("#content");
@@ -315,6 +552,7 @@ let mostrar = () =>{
 
 mostrar()
 
+//CANVI DE COLORS
 let canviarCol = () =>{
     let select = document.querySelector("select").value;
     if(select == "R2N"){
@@ -340,20 +578,3 @@ let canviarCol = () =>{
         img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/R1_barcelona.svg/1024px-R1_barcelona.svg.png";
     }    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//SEGONA PART
