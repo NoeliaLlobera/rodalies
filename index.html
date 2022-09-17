@@ -8,10 +8,6 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- R11: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/R11_Rodalies_de_Catalunya.svg/1200px-R11_Rodalies_de_Catalunya.svg.png 
-R2N: https://pbs.twimg.com/profile_images/662587044414255104/_4HjXDT7_400x400.jpg
-R1: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/R1_barcelona.svg/1024px-R1_barcelona.svg.png
--->
 <body>
     <div id="containerInt1">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/R1_barcelona.svg/1024px-R1_barcelona.svg.png" alt="">
@@ -19,21 +15,37 @@ R1: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/R1_barcelona.svg/1
         <div class="centrar">
             <label for="linia">Línia</label>
             <select name="select" id="select" onchange="mostrar()">
-
             <option value="R1">R1</option>
             <option value="R2N">R2N</option>
             <option value="R11">R11</option>
             </select>
          </div>
+         <!-- Select linies -->
+         <div id="content2">
+            <div class="selects">
+                <div class="al">
+                    <label for="s2">Origen:</label>
+                    <select name="s2" id="s2" onchange="comprovarAf()">
+                        <option value="0">Selecciona...</option>
+                    </select>
+                </div>
+                <div class="al">
+                    <label for="s2">Destinació:</label>
+                    <select name="s3" id="s3" onchange="comprovarAf()">
+                        <option value="0">Selecciona...</option>
+                    </select>
+                </div>
+                
+            </div>
+         </div>
+
 
         <div id="content">
 <!-- AQUÍ VAL EL CONTINGUT -->
         </div>
-
         
-
+            
+        </div>
     </div>
-        
-    
 </body>
 </html>

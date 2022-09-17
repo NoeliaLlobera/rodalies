@@ -1,3 +1,184 @@
+//LLISTAT ESTACIONS
+let sel2 = document.querySelector("#s2");
+let sel3 = document.querySelector("#s3");
+
+let estacionsR1 = () => {
+    //mostrar selects
+    let content2 = document.querySelector("#content2");
+    content2.style.display = "block";
+    //estacions
+    let estacionsZ1 = ["Maçanet-Massanes", "Tordera", "Blanes", "Malgrat de Mar", "Santa Susana", "Pineda de Mar", "Calella", "Sant Pol de Mar", "Canet de Mar", "Arenys de Mar", "Caldes d'Estrac", "Sant Andreu de Llavaneres", "Mataró", "Cabrera-Vilassar", "Vilassar de Mar", "Premià de Mar", "Ocata", "El Masnou", "Montgat Nord", "Montgat", "Badalona"];
+    let estacionsZ2 = ["Molins de Rei", "Sant Feliu de Llobregat", "Sant Joan Despí", "Cornellà"];
+    let estacionsZ3 = ["L'Hospitalet de Llobregat", "BCN-Sants", "BCN-Plaça Catalunya", "BCN-Arc de Triomf", "BCN-Clot/Aragó"];
+    let estacionsZ4 = ["Sant Adrià de Besòs"];
+    //variables selecció HTML
+    sel2 = document.querySelector("#s2");
+    sel3 = document.querySelector("#s3");
+    //optionsZ1
+    for(let i=0; i<estacionsZ1.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 1;
+        opt.innerHTML = estacionsZ1[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ1.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 1;
+        opt.innerHTML = estacionsZ1[i];
+        sel3.appendChild(opt);
+    }
+    //optionsZ2
+    for(let i=0; i<estacionsZ2.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 2;
+        opt.innerHTML = estacionsZ2[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ2.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 2;
+        opt.innerHTML = estacionsZ2[i];
+        sel3.appendChild(opt);
+    }
+    //optionsZ3
+    for(let i=0; i<estacionsZ3.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 3;
+        opt.innerHTML = estacionsZ3[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ3.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 3;
+        opt.innerHTML = estacionsZ3[i];
+        sel3.appendChild(opt);
+    }
+    //optionsZ3
+    for(let i=0; i<estacionsZ4.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 4;
+        opt.innerHTML = estacionsZ4[i];
+        sel2.appendChild(opt);
+    }
+    for(let i=0; i<estacionsZ4.length; i++){
+        let opt = document.createElement("option");
+        opt.value = 4;
+        opt.innerHTML = estacionsZ4[i];
+        sel3.appendChild(opt);
+    }
+    let borrar = document.querySelectorAll("p");
+}
+let comprovarAf  = () =>{  
+    //borrar si hi ha alternatives
+    let del = document.querySelectorAll(".b_alt");
+    del.forEach(elem => elem.remove())
+
+    // Z1 --> Z1
+    if(sel2.value == 1 && sel3.value==1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        content2.appendChild(res);
+    }
+    // Z2 --> Z2
+    if(sel2.value == 2 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe no proposa alternatives";
+        content2.appendChild(res);
+    }
+    // Z3 --> Z3
+    if(sel2.value == 2 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Alternativa: línies L1 i L2 de metro";
+        content2.appendChild(res);
+    }
+    //Z1 --> Z4 
+    if(sel2.value == 1 && sel3.value==4){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Combinació difícil. Un cop a Badalona Renfe proposa que caminis uns 25 minuts fins a la parada Bonavista/Bufalà del bus B7, que té parada a Sant Adrià.";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 4 && sel3.value==1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Combinació difícil. L'alternativa de Renfe és agafar el bus B7 a la parada de l'estació de Rodalies i baixar a Badalona a Bonavista/Bufalà. Un cop allà has de caminar uns 25 minuts fins a l'estació de Rodalies de Badalona.";
+        content2.appendChild(res);
+    }
+    //Z1 --> Z3 (ST ADRIÀ)
+    if(sel2.value == 1 && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Un cop a Badalona Renfe proposa caminar fins a l'estació de metro Badalona-Pompeu Fabra (10 minuts caminant). Allà proposa agafar la línia lila fins al Clot, on es pot fer trasbord a la línia vermella (para a les estacions d'Arc de Triomf, Plaça Catalunya, Plaça de Sants i Rambla Just Oliveras.";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 3 && sel3.value==1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe proposa utilitzar la línia vermella del metro (estacions de Rambla Just Oliveras, Pl. de Sants, Catalunya, Arc de Triomf) com a alternativa fins al Clot. Allà cal agafar la línia lila fins a Badalona Pompeu Fabra. Des d'aquesta última parada es pot arribar, caminant uns 10 minuts, a l'estació de Rodalies de Badalona, on es pot agafar l'R1.";
+        content2.appendChild(res);
+    }
+    //Z1 --> Z2 (ST ADRIÀ)
+    if(sel2.value == 1 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe no proposa alternatives.";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 2 && sel3.value==1){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe no proposa alternatives.";
+        content2.appendChild(res);
+    }
+    //Z2 --> Z3 (ST ADRIÀ)
+    if(sel2.value ==2  && sel3.value==3){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe no proposa alternatives.";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 3 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe no proposa alternatives.";
+        content2.appendChild(res);
+    }
+    //Z2 --> Z4 (ST ADRIÀ)
+    if(sel2.value2 == 2 && sel3.value==4){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe no proposa alternatives.";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 4 && sel3.value==2){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe no proposa alternatives.";
+        content2.appendChild(res);
+    }
+    //Z3 --> Z4 (ST ADRIÀ)
+    if(sel2.value  == 3 && sel3.value==4){
+        let res = document.createElement("p");
+        res.classList.add("b_alt");
+        res.innerHTML = "Renfe proposa agafar la línia vermella fins a Glòries i allà fer trasbord al TRAM, que arriba fins a Sant Adrià";
+        content2.appendChild(res);
+    }
+    if(sel2.value == 4 && sel3.value==3){
+        let res = document.createElement("p");
+        res.innerHTML = "Renfe proposa agafar el TRAM fins a Glòries i allà fer trasbord a la línia vermella.";
+        res.classList.add("b_alt");
+        content2.appendChild(res);
+    }
+}
+
+
+
+
+
+
 //CLASSE AFECTACIÓ
 // `Línia: ${linia}`,`Dates: ${data}`,`Afectació: ${afectacio}`,`Alternatives de Renfe: ${alternativa}`
 
@@ -82,6 +263,12 @@ let pAlternativa;
 let i = false;
 
 let mostrar = () =>{
+    let valorSelect = document.querySelector("#select").value;
+    if (valorSelect == "R1"){
+        estacionsR1();
+    } else{
+        content2.style.display="none";
+    }
     
     if(i){
         let del = document.querySelectorAll(".data");
@@ -92,7 +279,7 @@ let mostrar = () =>{
         del.forEach(elem => elem.remove());
         canviarCol();
     }
-    let valorSelect = document.querySelector("#select").value;
+    
     for(let i=0; i<afectacions.length; i++){
         if (afectacions[i].linia==valorSelect){
             //SI HI HA NODES
@@ -153,3 +340,20 @@ let canviarCol = () =>{
         img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/R1_barcelona.svg/1024px-R1_barcelona.svg.png";
     }    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//SEGONA PART

@@ -3,7 +3,7 @@ $fonsR1: rgba(0, 161, 201, 0.171);
 
 
 $R1:rgb(0, 86, 184);
-$fonsR1: rgba(0, 86, 184,, 0.171);
+$fonsR1: rgba(0, 86, 184,0.171);
 
 
 $fonsR2S: rgba(92, 190, 0, 0.171);
@@ -65,8 +65,44 @@ $fonsR2S: #5cbe00;
             top: 5%;
             right: 5%;
         }
+        .centrar{
+            margin-bottom: 20px;
+        }
         
     }
 
+
+}
+
+.b_alt{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#content2{
+    display: none;
+    .selects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .al{
+        display: flex;
+        width: 315px;
+        justify-content: space-between;
+    }
+    select{
+        width: 200px;
+    }
+    @media screen and (min-width:840px) {
+        .al{
+            justify-content: center;
+            gap: 15px;
+        }
+        
+    }
 
 }

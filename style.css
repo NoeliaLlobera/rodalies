@@ -8,12 +8,8 @@
   font-family: sans-serif;
   font-size: 20;
 }
-#containerInt1 p {
-  line-height: 1.5;
-}
 #containerInt1 h3 {
   text-align: center;
-  font-size: 24px;
 }
 #containerInt1 .data {
   font-weight: bold;
@@ -28,10 +24,10 @@
   margin-top: 2px;
 }
 #containerInt1 label {
-  font-size: 23px;
+  font-size: 20px;
 }
 #containerInt1 select {
-  font-size: 23px;
+  font-size: 20px;
   border: unset;
   border-bottom: 1px solid black;
 }
@@ -53,5 +49,39 @@
   #containerInt1 img {
     top: 5%;
     right: 5%;
+  }
+  #containerInt1 .centrar {
+    margin-bottom: 20px;
+  }
+}
+
+.b_alt {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#content2 {
+  display: none;
+}
+#content2 .selects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#content2 .al {
+  display: flex;
+  width: 315px;
+  justify-content: space-between;
+}
+#content2 select {
+  width: 200px;
+}
+@media screen and (min-width: 840px) {
+  #content2 .al {
+    justify-content: center;
+    gap: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
