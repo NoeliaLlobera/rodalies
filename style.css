@@ -78,6 +78,7 @@
 }
 #content2 select {
   width: 200px;
+  z-index: 111;
 }
 @media screen and (min-width: 840px) {
   #content2 .al {
