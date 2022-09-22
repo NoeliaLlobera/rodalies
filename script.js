@@ -83,53 +83,53 @@ let comprovarAfR2 = () =>{
     if(sel2.value == 1 && sel3.value==1){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        res.innerHTML = "Servei normal. No t'afecten les alteracions.";
         content2.appendChild(res);
     }
     // Z3 --> Z3
     if(sel2.value == 3 && sel3.value==3){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        res.innerHTML = "Servei normal. No t'afecten les alteracions.";
         content2.appendChild(res);
     }
     //1-2
     if(sel2.value == 1 && sel3.value==2){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Combinació complicada. Renfe proposa que vagis fins a l'estació de Sants i facis trasbord a la línia blava del metro o a les línies R3, R4, R12 per anar fins a la Sagrera. Un cop allà suggereix agafar la línia vermella del metro fins al Clot";
+        res.innerHTML = "Combinació complicada. Renfe proposa que vagis fins a l'estació de Sants i facis transbord a la línia blava del metro o a les línies R3, R4, R12 per anar fins a la Sagrera. Un cop allà, suggereix agafar la línia vermella del metro fins al Clot";
         content2.appendChild(res);
     }
     if(sel2.value == 1 && sel3.value==2){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Combinació complicada. Renfe proposa que agafis el metro (L1) fins a la Sagrera i allà facis trasbord o bé a la línia blava del metro o a les les línies R3, R4, R12 per arribar fins a Sants. A Sants pots tornar a agafar l'R2 Nord.";
+        res.innerHTML = "Combinació complicada. Renfe proposa que agafis el metro (L1) fins a la Sagrera i allà facis transbord o bé a la línia blava del metro o a les línies R3, R4, R12 per arribar fins a Sants. A Sants pots tornar a agafar l'R2 Nord.";
         content2.appendChild(res);
     }
     //1-3
     if(sel2.value == 1 && sel3.value==3){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o bé la línia blava del metro o a les les línies R3, R4, R12 fins a La Sagrera. Allà proposa o agafar la línia vermella del metro fins a Sant Andreu o agafar un bus llançadora fins a Sant Andreu (funciona els feiners de 6:00 a 10:00 i de 16:00 a 20:00) o fins a Granollers (feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers). A Granollers es pot tornar a agafar l'R2 Nord.";
+        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o la línia blava del metro o les línies R3, R4 o R12 de Rodalies fins a la Sagrera. Allà proposa o agafar la línia vermella del metro fins a Sant Andreu o agafar un bus llançadora fins a Sant Andreu (funciona els feiners de 6:00 a 10:00 i de 16:00 a 20:00) o fins a Granollers. A Granollers es pot tornar a agafar l'R2 Nord.<br><br>-  Horari del bus: feiners: 6:00 a 10:30h en sentit la Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit la Sagrera i de 18:00 a 20:45 en sentit Granollers.";
         content2.appendChild(res);
     }
     if(sel2.value == 3 && sel3.value == 1){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Renfe proposa: <br>  - Anar fins a Granollers i allà agafar un bus llançadora cap a la Sagrera, per enllaçar amb la línia blava del metro o rodalies (R3, R4, R12), que arriben fins a Sants (allà es pot tornar a agafar l'R2N) <br>  - Agafar un bus llançadora a Granollers fins a la Sagrera i fer el mateix trajecte que en l'opció anterior. Horari del bus: feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers"
+        res.innerHTML = "Renfe proposa: <br>  - Anar fins a Granollers i allà agafar un bus llançadora cap a la Sagrera per enllaçar amb la línia blava del metro o rodalies (R3, R4, R12), que arriben fins a Sants, on es pot tornar a agafar l'R2N <br>  - Agafar un bus llançadora a Granollers fins a la Sagrera i fer el mateix trajecte que en l'opció anterior. <be>-  Horari del bus: feiners: 6:00 a 10:30h en sentit la Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit la Sagrera i de 18:00 a 20:45 en sentit Granollers"
         content2.appendChild(res);
     }
     //2-3
     if(sel2.value == 2 && sel3.value==3){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "L'alternativa és agafar la línia vermella del metro fins a Sant Andreu, on es pot agafar l'R2N";
+        res.innerHTML = "L'alternativa proposada per Renfe és agafar la línia vermella del metro fins a Sant Andreu, on es pot agafar l'R2N";
         content2.appendChild(res);
     }
     if(sel2.value == 3 && sel3.value == 2){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Renfe proposa agafar a Sant Andreu la línia vermella del metro que arriba fins al Clot";
+        res.innerHTML = "Renfe proposa agafar a Sant Andreu la línia vermella del metro, que arriba fins al Clot";
         content2.appendChild(res);
     }
 }
@@ -204,40 +204,40 @@ let comprovarAfR11 = () =>{
     if(sel2.value == 1 && sel3.value==1){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        res.innerHTML = "Servei normal. No t'afecten les alteracions.";
         content2.appendChild(res);
     }
     // Z3 --> Z3
     if(sel2.value == 3 && sel3.value==3){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        res.innerHTML = "Servei normal. No t'afecten les alteracions.";
         content2.appendChild(res);
     }
     //1-2
     if(sel2.value == 1 && sel3.value==2){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Combinació complicada. Renfe proposa que vagis fins a l'estació de Sants i facis trasbord a la línia blava del metro o a les línies R3, R4, R12 per anar fins a la Sagrera. Un cop allà suggereix agafar la línia vermella del metro fins al Clot";
+        res.innerHTML = "Combinació complicada. Renfe proposa que vagis fins a l'estació de Sants i facis transbord a la línia blava del metro o a les línies R3, R4, R12 per anar fins a la Sagrera. Un cop allà suggereix agafar la línia vermella del metro fins al Clot";
         content2.appendChild(res);
     }
-    if(sel2.value == 1 && sel3.value==2){
+    if(sel2.value == 2 && sel3.value==1){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Combinació complicada. Renfe proposa que agafis el metro (L1) fins a la Sagrera i allà facis trasbord o bé a la línia blava del metro o a les les línies R3, R4, R12 per arribar fins a Sants. A Sants pots tornar a agafar l'R2 Nord.";
+        res.innerHTML = "Combinació complicada. Renfe proposa que agafis el metro (L1) fins a la Sagrera i allà facis transbord o bé a la línia blava del metro o a les línies R3, R4, R12 per arribar fins a Sants. A Sants pots tornar a agafar l'R2 Nord.";
         content2.appendChild(res);
     }
     //1-3
     if(sel2.value == 1 && sel3.value==3){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o bé la línia blava del metro o a les les línies R3, R4, R12 fins a La Sagrera. Allà proposa o agafar la línia vermella del metro fins a Sant Andreu o agafar un bus llançadora fins a Sant Andreu (funciona els feiners de 6:00 a 10:00 i de 16:00 a 20:00) o fins a Granollers (feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers). A Granollers es pot tornar a agafar l'R2 Nord.";
+        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o bé la línia blava del metro o a les línies R3, R4, R12 fins a a la Sagrera. Allà proposa o agafar la línia vermella del metro fins a Sant Andreu o agafar un bus llançadora fins a Sant Andreu (funciona els feiners de 6:00 a 10:00 i de 16:00 a 20:00) o fins a Granollers, on es pot tornar a agafar l'R2 Nord. <br><br>-  Horari del bus: feiners: 6:00 a 10:30h en sentit la Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit la Sagrera i de 18:00 a 20:45 en sentit Granollers.";
         content2.appendChild(res);
     }
     if(sel2.value == 3 && sel3.value == 1){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Renfe proposa: <br>  - Anar fins a Granollers i allà agafar un bus llançadora cap a la Sagrera, per enllaçar amb la línia blava del metro o rodalies (R3, R4, R12), que arriben fins a Sants (allà es pot tornar a agafar l'R2N) <br>  - Agafar un bus llançadora a Granollers fins a la Sagrera i fer el mateix trajecte que en l'opció anterior. Horari del bus: feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers"
+        res.innerHTML = "Renfe suggereix: <br>  - Anar fins a Granollers i allà agafar un bus llançadora cap a la Sagrera, per enllaçar amb la línia blava del metro o Rodalies (R3, R4, R12), que arriben fins a Sants (allà es pot tornar a agafar l'R2N) <br>  - Agafar un bus llançadora a Granollers fins a la Sagrera i fer el mateix trajecte que en l'opció anterior. Horari del bus: feiners: 6:00 a 10:30h en sentit La Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit La Sagrera i de 18:00 a 20:45 en sentit Granollers"
         content2.appendChild(res);
     }
     //2-3
@@ -341,7 +341,7 @@ let comprovarAf  = () =>{
     if(sel2.value == 1 && sel3.value==1){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Servei normal. No t'afecten les alteracions del servei.";
+        res.innerHTML = "Servei normal. No t'afecten les alteracions.";
         content2.appendChild(res);
     }
     // Z2 --> Z2
@@ -375,13 +375,13 @@ let comprovarAf  = () =>{
     if(sel2.value == 1 && sel3.value==3){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Un cop a Badalona Renfe proposa caminar fins a l'estació de metro Badalona-Pompeu Fabra (10 minuts caminant). Allà proposa agafar la línia lila fins al Clot, on es pot fer trasbord a la línia vermella (para a les estacions d'Arc de Triomf, Plaça Catalunya, Plaça de Sants i Rambla Just Oliveras.";
+        res.innerHTML = "Un cop a Badalona, Renfe proposa caminar fins a l'estació de metro Badalona-Pompeu Fabra (10 minuts). Allà suggereix agafar la línia lila fins al Clot, on es pot fer transbord a la línia vermella (para a les estacions d'Arc de Triomf, Plaça Catalunya, Plaça de Sants i Rambla Just Oliveras).";
         content2.appendChild(res);
     }
     if(sel2.value == 3 && sel3.value==1){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Renfe proposa utilitzar la línia vermella del metro (estacions de Rambla Just Oliveras, Pl. de Sants, Catalunya, Arc de Triomf) com a alternativa fins al Clot. Allà cal agafar la línia lila fins a Badalona Pompeu Fabra. Des d'aquesta última parada es pot arribar, caminant uns 10 minuts, a l'estació de Rodalies de Badalona, on es pot agafar l'R1.";
+        res.innerHTML = "Renfe proposa utilitzar la línia vermella del metro (estacions de Rambla Just Oliveres, Pl. de Sants, Catalunya, Arc de Triomf) com a alternativa fins al Clot. Allà cal agafar la línia lila fins a Badalona Pompeu Fabra. Des d'aquesta última parada es pot arribar, caminant uns 10 minuts, a l'estació de Rodalies de Badalona, on es pot agafar l'R1.";
         content2.appendChild(res);
     }
     //Z1 --> Z2 (ST ADRIÀ)
@@ -427,12 +427,12 @@ let comprovarAf  = () =>{
     if(sel2.value  == 3 && sel3.value==4){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "Renfe proposa agafar la línia vermella fins a Glòries i allà fer trasbord al TRAM, que arriba fins a Sant Adrià";
+        res.innerHTML = "Renfe proposa agafar la línia vermella fins a Glòries i allà fer transbord al TRAM, que arriba fins a Sant Adrià";
         content2.appendChild(res);
     }
     if(sel2.value == 4 && sel3.value==3){
         let res = document.createElement("p");
-        res.innerHTML = "Renfe proposa agafar el TRAM fins a Glòries i allà fer trasbord a la línia vermella.";
+        res.innerHTML = "Renfe proposa agafar el TRAM fins a Glòries i allà fer transbord a la línia vermella.";
         res.classList.add("b_alt");
         content2.appendChild(res);
     }
@@ -462,8 +462,6 @@ afectacions[1] = new Afectació("R11","Dissabte 17-09 i diumenge 18-09", "Els tr
 //19 DE SETEMBRE AL 2 DE DESEMBRE
 afectacions[2] = new Afectació("R2N","Del 19 de setembre al 2 de desembre","Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Sant Andreu Comtal.",`<br>  - En senetit Maçanet-Massanes, línies R3,R4 i R5 del metro fins a Sagrera Meridiana, on hi haurà autobusos només en hora punta fins a Sant Andreu Comptal. <br> - En sentit Aeroport, linia 1 del Metro.`)
 afectacions[3] = new Afectació("R11","Del 19 de setembre al 2 de desembre","Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Sant Andreu Comtal.",`<br>  - En senetit Maçanet-Massanes, línies R3,R4 i R5 del metro fins a Sagrera Meridiana, on hi haurà autobusos només en hora punta fins a Sant Andreu Comptal. <br> - En sentit Aeroport, linia 1 del Metro.`)
-
-// "En senetit Maçanet-Massanes, línies R3,R4 i R5 del metro fins ;a Sagrera Meridiana, on hi haurà autobusos només en hora punta fins a Sant Andreu Comptal.En sentit Aeroport, linia 1 del Metro."
 
 // 3 al 10 desembre
 afectacions[4] = new Afectació("R2N","Del 3 de desembre al 10 de desembre", "Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Montcada i Reixach", 
