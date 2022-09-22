@@ -110,7 +110,7 @@ let comprovarAfR2 = () =>{
     if(sel2.value == 1 && sel3.value==3){
         let res = document.createElement("p");
         res.classList.add("b_alt");
-        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o la línia blava del metro o les línies R3, R4 o R12 de Rodalies fins a la Sagrera. Allà proposa o agafar la línia vermella del metro fins a Sant Andreu o agafar un bus llançadora fins a Sant Andreu (funciona els feiners de 6:00 a 10:00 i de 16:00 a 20:00) o fins a Granollers. A Granollers es pot tornar a agafar l'R2 Nord.<br><br>-  Horari del bus: feiners: 6:00 a 10:30h en sentit la Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit la Sagrera i de 18:00 a 20:45 en sentit Granollers.";
+        res.innerHTML = "L'alternativa de Renfe és anar fins a Sants per agafar o la línia blava del metro o les línies R3, R4 o R12 de Rodalies fins a la Sagrera. Allà proposa agafar la línia vermella del metro o un bus llançadora fins a Sant Andreu o Granollers. A Granollers es pot tornar a agafar l'R2 Nord.<br><br>-  Horari del bus: feiners: 6:00 a 10:30h en sentit la Sagrera i de 17:00 a 20:30 en sentit Granollers. Cap de setmana i festius: de 8:00 a 10:45 en sentit la Sagrera i de 18:00 a 20:45 en sentit Granollers.";
         content2.appendChild(res);
     }
     if(sel2.value == 3 && sel3.value == 1){
@@ -344,7 +344,6 @@ let comprovarAfR11 = () =>{
                             res.innerHTML = "Servei normal. No hi ha alteracions fins el dissabte 29 d'octubre.";
                             content2.appendChild(res);
                         }
-
             
                         // // Z1 --> Z1
                         // if(sel2.value == 1 && sel3.value==1){
@@ -463,10 +462,6 @@ let afectacions = [];
 //AFEGIR AFECTACIONS AQUÍ
 
 //R2N I R11
-//17 i 19 setembre
-// afectacions[0] = new Afectació("R2N","Dissabte 17 de setembre i diumenge 18 de setembre", "Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Montcada i Reixach", 
-// "<br>  - Caminar fins a l'estació Montcada i Reixac - Manresa (enllaç amb línies R4, R12 i R7) <br> - Bus complementari cada 15 minuts desde Montcada fins a Sagrera Meridiana.")
-// afectacions[1] = new Afectació("R11","Dissabte 17-09 i diumenge 18-09", "Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Montcada i Reixach", "<br>  - Caminar fins a l'estació Montcada i Reixac - Manresa (enllaç amb línies R4, R12 i R7 <br> - Bus complementari cada 15 minuts desde Montcada fins a Sagrera Meridiana.");
 
 //19 DE SETEMBRE AL 2 DE DESEMBRE
 afectacions[0] = new Afectació("R2N","Del 19 de setembre al 2 de desembre","Els trens de l’R2 Nord i l’R11 iniciaran i finalitzaran el seu recorregut a Sant Andreu Comtal.",`<br>  - En senetit Maçanet-Massanes, línies R3,R4 i R5 del metro fins a Sagrera Meridiana, on hi haurà autobusos només en hora punta fins a Sant Andreu Comptal. <br> - En sentit Aeroport, linia 1 del Metro.`)
@@ -479,12 +474,6 @@ afectacions[3] = new Afectació("R11","Del 3 de desembre al 10 de desembre", "El
 
 //R1
 // DEL 17 AL 19 DE SETEMBRE 
-// afectacions[6] = new Afectació(
-// "R1",
-// "Del dissabte 17 al dilluns 19 de setembre ",
-// "Els trens de la línia R1 iniciaran i finalitzaran el seu recorregut a Badalona",
-// "<br>  - Caminar fins a la parada Badalona Pompeu Fabra de la L2 del Metro (10 minuts) <br>  - Caminar fins a la parada del Bus B7 Bonavista/Bufalà (25 minuts) per enllaçar amb el TRAM a Sant Adrià"
-// )
 afectacions[4] = new Afectació(
 "R1",
 "Del dissabte 29 al diumenge 30 d'octubre",
@@ -550,9 +539,7 @@ let mostrar = () =>{
             pData.innerHTML = afectacions[i].data;
             pAfectacio.innerHTML = `<strong>Afectació: </strong>${afectacions[i].afectacio}`;
             pAlternativa.innerHTML =`<strong>Alternatives de Renfe</strong>: ${afectacions[i].alternativa}`; ;
-
         }
-
     }
     i = true;
 }
